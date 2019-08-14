@@ -4,7 +4,6 @@ import LaboratorioLista from './LaboratorioLista';
 function Laboratorios({ laboratorios, guardarRecargarLaboratorios, auth }) {
     return (
         <Fragment>
-            {auth ? (
                 <div>
                     <h1 className="text-center">Laboratorios</h1>
                     <ul className="list-group mt-5">
@@ -17,7 +16,6 @@ function Laboratorios({ laboratorios, guardarRecargarLaboratorios, auth }) {
                         ))}
                     </ul>
                 </div>
-            ) : <h1 className="text-center">Página no disponible</h1>}
         </Fragment>
     )
 }
