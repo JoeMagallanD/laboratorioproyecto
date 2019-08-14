@@ -32,7 +32,7 @@ function AgregarLaboratorio({history, guardarRecargarLaboratorios}){
             })      
             .then(
                 Swal.fire({
-                 position: 'center',
+                position: 'center',
                 type: 'success',
                 title: 'Excelente!',
                 text: 'Laboratorio creado con exito',
@@ -64,20 +64,32 @@ function AgregarLaboratorio({history, guardarRecargarLaboratorios}){
             <div className="form-group">
                 <label>Nombre Laboratorio</label>
                 <input 
-                    type="text" className="form-control" name="nombre" placeholder="Nombre Laboratorio"onChange={e=> guardarNombre(e.target.value)}
+                    type="text" 
+                    className="form-control" 
+                    name="nombre" 
+                    placeholder="Nombre Laboratorio"
+                    onChange={e=> guardarNombre(e.target.value)}
                 />
             </div>
 
             <div className="form-group">
                 <label>Descripcion Laboratorio</label>
                 <input 
-                    type="text" className="form-control" name="descripcion"placeholder="Descripcion Laboratorio"onChange={e=> guardarDescripcion(e.target.value)}
+                    type="text" 
+                    className="form-control" 
+                    name="descripcion"
+                    placeholder="Descripcion Laboratorio"
+                    onChange={e=> guardarDescripcion(e.target.value)}
                 />
             </div>
             <div className="form-group">
                 <label>Patt Laboratorio</label>
                 <textarea 
-                    type="text" className="form-control" name="patt" placeholder="Patt Laboratorio" onChange={e=> guardarPatt(e.target.value)}
+                    type="text" 
+                    className="form-control" 
+                    name="patt"
+                    placeholder="Patt Laboratorio"
+                    onChange={e=> guardarPatt(e.target.value)}
                 ></textarea>
             </div>
         

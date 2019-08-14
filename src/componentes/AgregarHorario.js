@@ -70,33 +70,57 @@ function AgregarHorario({history, datos}){
         >
             <div className="form-group">
                 <label>Nombre Docente</label>
-                <input type="text" className="form-control" name="docente" placeholder="Docente"
-                    onChange={e => guardarNombreDocente(e.target.value)}/>
+                <input
+                    type="text"
+                    className="form-control"
+                    name="docente"
+                    placeholder="Docente"
+                    onChange={e => guardarNombreDocente(e.target.value)}
+                />
             </div>
 
             <div className="form-group">
                         <label>Materia</label>
-                        <input type="text" className="form-control" name="materia" placeholder="Materia"
-                            onChange={e => guardarMateria(e.target.value)}/>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="materia"
+                            placeholder="Materia"
+                            onChange={e => guardarMateria(e.target.value)}
+                        />
                     </div>
                     <div className="form row">
                         <div className="form-group col-md-6">
                             <label>Hora inicio</label>
-                            <input type="time" className="form-control" name="horaini" placeholder="Materia"
-                                onChange={e => guardarHorainicio(e.target.value)} />
+                            <input
+                                type="time"
+                                className="form-control"
+                                name="horaini"
+                                placeholder="Materia"
+                                onChange={e => guardarHorainicio(e.target.value)}
+                            />
                         </div>
                         <div className="form-group col-md-6">
                             <label>Hora Fin</label>
-                            <input type="time" className="form-control" name="horafin" placeholder="Materia"
+                            <input
+                                type="time"
+                                className="form-control"
+                                name="horafin"
+                                placeholder="Materia"
                                 onChange={e => guardarHorafin(e.target.value)}
                             />
                         </div>
                     </div>
                     <div className="form-group">
                         <label>Laboratorio</label>
-                        <select className="form-control" name="laboratorio" onChange={e => guardarLab(e.target.value)}>
+                        <select 
+                            className="form-control" 
+                            name="laboratorio" 
+                            onChange={e => guardarLab(e.target.value)}>
                                 <option>Seleccione un laboratorio</option>
-                                {datos.map(dato => ( <OpcionesLab key={dato.id} dato={dato} /> ))}
+                                {datos.map(dato => (
+                                    <OpcionesLab key={dato.id} dato={dato} />
+                                ))}
                         </select>
                     </div>
                     <div className="form-group">
