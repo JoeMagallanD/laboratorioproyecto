@@ -1,38 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
-import firebase from '../components/config/firebase';
-import Swal from 'sweetalert2';
 
 
-function Header({ history }) {
+function Header() {
 
-    const [autenticacion, guardarAutenticacion] = useState(false);
 
-    const logOut = () => {
-        firebase.auth().signOut();
-        Swal.fire({
-            position: 'center',
-            type: 'success',
-            title: 'Bien',
-            text: 'Sesión cerrada con exito, vuelva pronto.',
-            showConfirmButton: false,
-            timer: 1500
-        })
-        history.replace('/');
-    }
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            //El state se pone en true si el usuario esta logeado
-            return guardarAutenticacion(true);
-        } else {
-            //El state se pone en false si el usuario esta logeado
-            return guardarAutenticacion(false);
-        }
-    })
+    
+ 
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 mb-5">
-            {autenticacion ? (
                 <div className="container-fluid">
                     <Link to="/laboratorios" className="navbar-brand">Sistema de Laboratorios | </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,10 +58,8 @@ function Header({ history }) {
 
 
                         </ul>
-                        <button className="btn btn-sm btn-outline-primary my-2 my-sm-0" onClick={logOut} >Cerrar Sesión</button>
                     </div>
                 </div>
-            ) : <Link to="/" className="navbar-brand" >Sistema de laboratorios</Link>}
         </nav>
     )
 }

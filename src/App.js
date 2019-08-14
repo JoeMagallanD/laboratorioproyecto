@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import firebase from './components/config/firebase';
+import firebase from './componentes/config/firebase';
 
-import Login from './components/autentificacion/Login';
-import Header from './components/Header';
+import Header from './componentes/Header';
 
-import Laboratorios from './components/Laboratorios';
-import AgregarLaboratorio from './components/AgregarLaboratorio';
-import EditarLaboratorio from './components/EditarLaboratorio';
-import Laboratorio from './components/Laboratorio';
+import Laboratorios from './componentes/Laboratorios';
+import AgregarLaboratorio from './componentes/AgregarLaboratorio';
+import EditarLaboratorio from './componentes/EditarLaboratorio';
 
 
 
@@ -40,13 +38,7 @@ function App() {
       <Header />
       <main className="container mt-5">
         <Switch>
-          <Route exact path="/"
-            render={() => (
-              <Login
-                recargar={guardarRecargarLaboratorios}
-              />
-            )}
-          />
+        
           {/*aqui empieza las rutas de los laboratorisos*/}
           <Route exact path="/laboratorios"
             render={() => (
@@ -62,7 +54,6 @@ function App() {
                 guardarRecargarLaboratorios={guardarRecargarLaboratorios}
               />
             )} />
-          <Route exact path="/laboratorios/:id" component={Laboratorio} />
           <Route exact path="/laboratorios/editar/:id"
             render={props => {
               // tomar el id del laboratorio
