@@ -20,7 +20,7 @@ function Login({ history, recargar }) {
                 timer: 1500
             })
             recargar(true);
-            history.replace('/home');
+            history.replace('/laboratorio');
         } catch (error) {
             console.log(error.message);
             if (error.message === 'The password is invalid or the user does not have a password.') {
@@ -44,26 +44,28 @@ function Login({ history, recargar }) {
         <div className="container">
             <div className="sidenav">
                 <div className="login-main-text">
-                    <h2>Login Page</h2>
-                </div>
-            </div>
-            <div class="main">
-                <div class="col-md-6 col-sm-12">
-                    <div class="login-form">
-                        <form>
-                            <div class="form-group">
-                                <label>User Name</label>
-                                <input type="text" class="form-control" placeholder="User Name" value={correo}
-                                    onChange={e => guardarCorreo(e.target.value)} />
+                    <form onSubmit={logeo}>
+                        <h2>Login Page</h2>
+                        <div class="main">
+                            <div class="col-md-6 col-sm-12">
+                                <div class="login-form">
+                                    <form>
+                                        <div class="form-group">
+                                            <label>User Name</label>
+                                            <input type="text" class="form-control" placeholder="User Name" value={correo}
+                                                onChange={e => guardarCorreo(e.target.value)} />
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" placeholder="Password" value={contrasena}
+                                                onChange={e => guardarContrasena(e.target.value)} />
+                                        </div>
+                                        <button type="submit" class="btn btn-black">Login</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" value={contrasena}
-                                    onChange={e => guardarContrasena(e.target.value)} />
-                            </div>
-                            <button type="submit" class="btn btn-black">Login</button>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

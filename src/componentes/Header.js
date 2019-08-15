@@ -14,7 +14,7 @@ function Header({ history }) {
             position: 'center',
             type: 'success',
             title: 'Bien',
-            text: 'Sesión cerrada con exito, vuelva pronto.',
+            text: 'Sesión cerrada con exito.',
             showConfirmButton: false,
             timer: 1500
         })
@@ -34,7 +34,7 @@ function Header({ history }) {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-2 mb-5">
             {autenticacion ? (
                 <div className="container-fluid">
-                    <Link to="/laboratorios" className="navbar-brand">Sistema de Laboratorios | </Link>
+                    <Link to="/laboratorios" className="navbar-brand">Laboratorios | </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
