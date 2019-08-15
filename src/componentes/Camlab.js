@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { AFrameRenderer, Marker } from 'react-web-ar';
-import firebase from '../components/config/firebase';
+import firebase from '../componentes/config/firebase';
 
-export default function Labpatt(){  
+export default function Camlab(){  
 
   const [horarios, guardarHorarios] = useState([]);
 

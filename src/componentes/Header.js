@@ -73,10 +73,10 @@ function Header({ history }) {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/cam"
+                                    to="/camar"
                                     className="nav-link"
                                     activeClassName="active"
-                                >Cam AR.js</NavLink>
+                                >AR.js</NavLink>
                             </li> 
                         </ul>
                         <button className="btn btn-sm btn-outline-primary my-2 my-sm-0" onClick={logOut} >logOut</button>

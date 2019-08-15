@@ -4,7 +4,7 @@ import firebase from './componentes/config/firebase';
 
 import Login from './componentes/autentificacion/Login';
 import Header from './componentes/Header';
-
+import Camlab from './componentes/Camlab';
 import Laboratorios from './componentes/Laboratorios';
 import AgregarLaboratorio from './componentes/AgregarLaboratorio';
 import EditarLaboratorio from './componentes/EditarLaboratorio';
@@ -70,7 +70,7 @@ function App() {
               />
             )}
           />
-          {/*aqui empieza las rutas de los laboratorisos*/}
+          <Route exact path ="/camar" component={Camlab}/>
           <Route exact path="/laboratorios"
             render={() => (
               <Laboratorios
