@@ -45,7 +45,7 @@ function Header({ history }) {
                                     to='/laboratorios'
                                     className="nav-link"
                                     activeClassName="active"
-                                >Laboratorios</NavLink>
+                                >Laboratorios Disponible</NavLink>
                             </li>
 
                             <li className="nav-item">
@@ -53,7 +53,7 @@ function Header({ history }) {
                                     to='/nuevo-laboratorio'
                                     className="nav-link"
                                     activeClassName="active"
-                                >Nuevo Laboratorio</NavLink>
+                                >Agregar Laboratorio</NavLink>
                             </li>
 
                             <li className="nav-item">
@@ -69,19 +69,17 @@ function Header({ history }) {
                                     to='/nuevo-horario'
                                     className="nav-link"
                                     activeClassName="active"
-                                >Nuevo Horario</NavLink>
+                                >Agregar Horario</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink  
-                                    to="/nuevo-marcador" 
-                                    className="nav-link" 
+                                <NavLink
+                                    to="/arpatt"
+                                    className="nav-link"
                                     activeClassName="active"
-                                >Generar Marcador</NavLink>
-                            </li>
-
-
+                                >Cam AR.js</NavLink>
+                            </li> 
                         </ul>
-                        <button className="btn btn-sm btn-outline-primary my-2 my-sm-0" onClick={logOut} >Cerrar Sesión</button>
+                        <button className="btn btn-sm btn-outline-primary my-2 my-sm-0" onClick={logOut} >logOut</button>
                     </div>
                 </div>
             ) : <Link to="/" className="navbar-brand" >Sistema de laboratorios</Link>}

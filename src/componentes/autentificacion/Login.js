@@ -20,7 +20,7 @@ function Login({ history, recargar }) {
                 timer: 1500
             })
             recargar(true);
-            history.replace('/laboratorio');
+            history.replace('/laboratorios');
         } catch (error) {
             console.log(error.message);
             if (error.message === 'The password is invalid or the user does not have a password.') {
@@ -33,7 +33,7 @@ function Login({ history, recargar }) {
                 Swal.fire({
                     type: 'error',
                     title: 'Contraseña incorrecta',
-                    text: 'El correo que ingresaste es incorrecto!',
+                    text: 'El correo que ingresaste no es valido',
                 })
             }
 
