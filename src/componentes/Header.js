@@ -73,7 +73,7 @@ function Header({ history }) {
                             </li>
                             <li className="nav-item">
                                 <NavLink
-                                    to="/arpatt"
+                                    to="/cam"
                                     className="nav-link"
                                     activeClassName="active"
                                 >Cam AR.js</NavLink>
