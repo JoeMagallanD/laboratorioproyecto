@@ -8,7 +8,7 @@ import firebase from './config/firebase';
 
 function EditarHorario(props) {
 
-    //destructuring de propos
+    //destructuring de props
     const { history, horario, datos } = props;
 
     //generar los refs

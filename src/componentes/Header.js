@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
-import firebase from '../components/config/firebase';
+import firebase from '../componentes/config/firebase';
 import Swal from 'sweetalert2';
 
 

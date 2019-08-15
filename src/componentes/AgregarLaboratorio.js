@@ -52,51 +52,52 @@ function AgregarLaboratorio({history, guardarRecargarLaboratorios}){
         history.push('/laboratorios');
     }
     return (
-        <div className="col-md-8 mx-auto ">
-        <h1 className="text-center">Agregar Nuevo Laboratorio</h1>
+        <div className="jumbotron">
+            <div className="col-md-8 mx-auto ">
+                <h1 className="text-center">Agregar Nuevo Laboratorio</h1>
 
-        {(error)? <Error mensaje='Todos los campos son obligatorios'/>: null}
-        
-        <form
-            className="mt-5"
-            onSubmit={AgregarLaboratorio}
-        >
-            <div className="form-group">
-                <label>Nombre Laboratorio</label>
-                <input 
-                    type="text" 
-                    className="form-control" 
-                    name="nombre" 
-                    placeholder="Nombre Laboratorio"
-                    onChange={e=> guardarNombre(e.target.value)}
-                />
-            </div>
+                {(error) ? <Error mensaje='Todos los campos son obligatorios' /> : null}
 
-            <div className="form-group">
-                <label>Descripcion Laboratorio</label>
-                <input 
-                    type="text" 
-                    className="form-control" 
-                    name="descripcion"
-                    placeholder="Descripcion Laboratorio"
-                    onChange={e=> guardarDescripcion(e.target.value)}
-                />
+                <form
+                    className="mt-5"
+                    onSubmit={AgregarLaboratorio}
+                >
+                    <div className="form-group">
+                        <label>Nombre Laboratorio</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="nombre"
+                            placeholder="Nombre Laboratorio"
+                            onChange={e => guardarNombre(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Descripcion Laboratorio</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            name="descripcion"
+                            placeholder="Descripcion Laboratorio"
+                            onChange={e => guardarDescripcion(e.target.value)}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Patt Laboratorio</label>
+                        <textarea
+                            type="text"
+                            className="form-control"
+                            name="patt"
+                            placeholder="Patt Laboratorio"
+                            onChange={e => guardarPatt(e.target.value)}
+                        ></textarea>
+                    </div>
+
+                    <input type="submit" className="font-weight-bold text-uppercase mt-5 btn btn-primary btn-block py-3" value="Agregar Laboratorio" />
+                </form>
             </div>
-            <div className="form-group">
-                <label>Patt Laboratorio</label>
-                <textarea 
-                    type="text" 
-                    className="form-control" 
-                    name="patt"
-                    placeholder="Patt Laboratorio"
-                    onChange={e=> guardarPatt(e.target.value)}
-                ></textarea>
-            </div>
-        
-            <input type="submit" className="font-weight-bold text-uppercase mt-5 btn btn-primary btn-block py-3" value="Agregar Laboratorio" />
-        </form>
-    </div>
-        
+        </div>
     )
 }
 export default withRouter(AgregarLaboratorio);
